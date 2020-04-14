@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	hello "github.com/ironcore864/go-hello-module"
+    hello "github.com/ironcore864/go-hello-module"
 )
 
 func main() {

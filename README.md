@@ -1,3 +1,3 @@
 # Go Use Module Example
 
-Using module "go-hello-module" from github.com/ironcore864/go-hello-module.
+Using module "go-hello-module" from https://github.com/IronCore864/go-hello-module.

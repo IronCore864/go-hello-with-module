@@ -8,6 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Go
+        uses: actions/setup-go@v3
       - name: Download cyclonedx-gomod
         uses: CycloneDX/gh-gomod-generate-sbom@v1
         with:

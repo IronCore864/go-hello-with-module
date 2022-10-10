@@ -5,9 +5,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  cyclonedx:
-    runs-on: ubuntu-latest
-
+  build:
     steps:
       - name: CycloneDX GoMod Generate SBOM
         uses: CycloneDX/gh-gomod-generate-sbom@v1.1.0

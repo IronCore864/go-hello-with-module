@@ -1,0 +1,19 @@
+name: SBOM
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  cyclonedx:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Download and invoke cyclonedx-gomod in a single step
+      - name: Generate SBOM
+        uses: CycloneDX/gh-gomod-generate-sbom@v1
+        with:
+          version: v1
+          args: mod -licenses -json -output bom.json

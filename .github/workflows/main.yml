@@ -13,4 +13,4 @@ jobs:
         with:
           version: v1
       - name: Generate SBOM
-        run: cyclonedx-gomod -licenses -json -output bom.json
+        run: cyclonedx-gomod app -json -output hello.bom.json

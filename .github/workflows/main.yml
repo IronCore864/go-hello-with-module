@@ -6,8 +6,11 @@ on:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
     steps:
-      - name: CycloneDX GoMod Generate SBOM
-        uses: CycloneDX/gh-gomod-generate-sbom@v1.1.0
+      - name: Download cyclonedx-gomod
+        uses: CycloneDX/gh-gomod-generate-sbom@v1
         with:
-          args: mod -licenses -json -output bom.json
+          version: v1
+      - name: Generate SBOM
+        run: cyclonedx-gomod -licenses -json -output bom.json
